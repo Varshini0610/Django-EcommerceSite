@@ -5,6 +5,12 @@
 <head>
   <meta charset="utf-8">
   <style>
+
+    body {
+        font-family: 'DejaVu Sans', Arial, sans-serif;
+    }
+
+
     @page {
       size: A4;
       margin: 1cm;
@@ -15,7 +21,8 @@
         margin-left: 9cm;
         margin-right: 9cm;
         height: 1cm;
-      }
+        
+      } 
     }
 
     .invoice-box {
@@ -164,9 +171,9 @@
             <tr>
               <td>
                 Product Image :<br>
-                 <img src="{% static product_image.url %}" alt="Profile Pic" height="40px" width="40px" /><br><br>
+                <img src="{{productImagePath}}" alt="Product Image" height="40px" width="40px" /><br><br>
                 Product Price : <br>
-                ₹{{productPrice}}
+                &#8377;{{productPrice}}
               </td>
               <td>
                 Product: <br> {{productName}}<br><br>
